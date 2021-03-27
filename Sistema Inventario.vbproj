@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{321B16D1-35CA-40A8-ABE4-51D4757C3C78}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sistema_Inventario.My.MyApplication</StartupObject>
+    <RootNamespace>Sistema_Inventario</RootNamespace>
+    <AssemblyName>Sistema Inventario</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Sistema Inventario.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Sistema Inventario.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Text</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexion.vb" />
+    <Compile Include="DatabasemedicamentosDataSetContactos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabasemedicamentosDataSetContactos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabasemedicamentosDataSetFactura.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabasemedicamentosDataSetFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabasemedicamentosDataSetFactura.vb">
+      <DependentUpon>DatabasemedicamentosDataSetFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabasemedicamentosDataSetLaboratorios.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabasemedicamentosDataSetLaboratorios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabasemedicamentosDataSetMED.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabasemedicamentosDataSetMED.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabasemedicamentosDataSetMED.vb">
+      <DependentUpon>DatabasemedicamentosDataSetMED.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabasemedicamentosDataSetUsuarios.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabasemedicamentosDataSetUsuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseproductosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseproductosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseproductosDataSet.vb">
+      <DependentUpon>DatabaseproductosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseproductosDataSetFacturas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseproductosDataSetFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12.Designer.vb">
+      <DependentUpon>Form12.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form12.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form13.Designer.vb">
+      <DependentUpon>Form13.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form13.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form14.Designer.vb">
+      <DependentUpon>Form14.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form14.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inprimir.Designer.vb">
+      <DependentUpon>Inprimir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inprimir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10.Designer.vb">
+      <DependentUpon>Form10.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11.Designer.vb">
+      <DependentUpon>Form11.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form11.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.vb">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.vb">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.vb">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.vb">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.vb">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.vb">
+      <DependentUpon>Form9.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form9.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="..\..\..\..\Visual Studio 2015\Proyecto Final.Designer.vb">
+      <DependentUpon>Proyecto Final.vb</DependentUpon>
+      <Link>Proyecto Final.Designer.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Visual Studio 2015\Proyecto Final.vb">
+      <SubType>Form</SubType>
+      <Link>Proyecto Final.vb</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="facturarreport.rdlc" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12.resx">
+      <DependentUpon>Form12.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form13.resx">
+      <DependentUpon>Form13.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form14.resx">
+      <DependentUpon>Form14.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inprimir.resx">
+      <DependentUpon>Inprimir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\..\Visual Studio 2015\Proyecto Final.resx">
+      <DependentUpon>Proyecto Final.vb</DependentUpon>
+      <Link>Proyecto Final.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11.resx">
+      <DependentUpon>Form11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DatabasemedicamentosDataSetContactos.xsc">
+      <DependentUpon>DatabasemedicamentosDataSetContactos.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasemedicamentosDataSetContactos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabasemedicamentosDataSetContactos.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabasemedicamentosDataSetContactos.xss">
+      <DependentUpon>DatabasemedicamentosDataSetContactos.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasemedicamentosDataSetFactura.xsc">
+      <DependentUpon>DatabasemedicamentosDataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasemedicamentosDataSetFactura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabasemedicamentosDataSetFactura.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabasemedicamentosDataSetFactura.xss">
+      <DependentUpon>DatabasemedicamentosDataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasemedicamentosDataSetLaboratorios.xsc">
+      <DependentUpon>DatabasemedicamentosDataSetLaboratorios.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasemedicamentosDataSetLaboratorios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabasemedicamentosDataSetLaboratorios.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabasemedicamentosDataSetLaboratorios.xss">
+      <DependentUpon>DatabasemedicamentosDataSetLaboratorios.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasemedicamentosDataSetMED.xsc">
+      <DependentUpon>DatabasemedicamentosDataSetMED.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasemedicamentosDataSetMED.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabasemedicamentosDataSetMED.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabasemedicamentosDataSetMED.xss">
+      <DependentUpon>DatabasemedicamentosDataSetMED.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasemedicamentosDataSetUsuarios.xsc">
+      <DependentUpon>DatabasemedicamentosDataSetUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasemedicamentosDataSetUsuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabasemedicamentosDataSetUsuarios.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabasemedicamentosDataSetUsuarios.xss">
+      <DependentUpon>DatabasemedicamentosDataSetUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseproductosDataSet.xsc">
+      <DependentUpon>DatabaseproductosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseproductosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseproductosDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseproductosDataSet.xss">
+      <DependentUpon>DatabaseproductosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseproductosDataSetFacturas.xsc">
+      <DependentUpon>DatabaseproductosDataSetFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseproductosDataSetFacturas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseproductosDataSetFacturas.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseproductosDataSetFacturas.xss">
+      <DependentUpon>DatabaseproductosDataSetFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sistema_Inventario\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\+HD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dftugih.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dftugih1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yjyjjyjyu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gyihj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y53yy5y5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12323.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123231.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rr332r.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtgtty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123232.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rr332r1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\231334df.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\231334df1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xcvdvfg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hrhtyy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\benbrnrtrjh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtgtty1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produc1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
